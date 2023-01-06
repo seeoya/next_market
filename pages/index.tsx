@@ -6,5 +6,9 @@ import styles from "../styles/Home.module.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-    return <>index</>;
+    return (
+        <div className="bg-red-500">
+            <h1 className="text-black">Index</h1>
+        </div>
+    );
 }

@@ -1,9 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "@next/font/google";
 import styles from "../styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
     return (
@@ -12,22 +9,32 @@ export default function Home() {
             <div className="bg-white p-6 rounded-3xl shadow-xl">
                 <span className="font-semibold text-3xl">Select Item</span>
 
-                <div className="flex justify-between my-2">
-                    <span className="text-gray-500">Gray Chair</span>
-                    <span className="font-semibold">$19</span>
-                </div>
+                <ul>
+                    {[1, 2, 3, 4, 5].map((i) => (
+                        <div key={i} className="flex justify-between my-2 odd:bg-blue-50 even:bg-yellow-500">
+                            <span className="text-gray-500">Gray Chair</span>
+                            <span className="font-semibold">$19</span>
+                        </div>
+                    ))}
+                </ul>
 
-                <div className="flex justify-between">
-                    <span className="text-gray-500">Gray Chair</span>
-                    <span className="font-semibold">$19</span>
-                </div>
+                {["a", "b", "c", ""].map((c, i) => (
+                    <li key={i} className="bg-red-500 py-2 empty:hidden">
+                        {c}
+                    </li>
+                ))}
 
                 <div className="flex justify-between mt-2 pt-2 border-t-2 border-dashed">
                     <span>Total</span>
                     <span className="font-semibold">$10</span>
                 </div>
 
-                <div className="p-3 mx-auto mt-5 bg-blue-500 text-white text-center rounded-xl w-1/2">Checkout</div>
+                <button
+                    className="block p-3 mx-auto mt-5 bg-blue-500 text-white text-center rounded-xl w-3/4
+                hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500 transition"
+                >
+                    Checkout
+                </button>
             </div>
 
             <div className="bg-white overflow-hidden rounded-2xl shadow-xl">
@@ -73,10 +80,10 @@ export default function Home() {
                     <span className="text-xs text-gray-500">Chair</span>
 
                     <div className="mt-3 mb-5 flex justify-between items-center">
-                        <div>
-                            <input type="radio" />
-                            <input type="radio" />
-                            <input type="radio" />
+                        <div className="space-x-2">
+                            <button className="w-5 h-5 rounded-full focus:ring-2 ring-offset-2 ring-opacity-70 ring-yellow-500 bg-yellow-500 transition"></button>
+                            <button className="w-5 h-5 rounded-full focus:ring-2 ring-offset-2 ring-opacity-70 ring-indigo-500 bg-indigo-500 transition"></button>
+                            <button className="w-5 h-5 rounded-full focus:ring-2 ring-offset-2 ring-opacity-70 ring-teal-500 bg-teal-500 transition"></button>
                         </div>
 
                         <div className="flex items-center space-x-5">

@@ -11,18 +11,12 @@ export default function Home() {
 
                 <ul>
                     {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="flex justify-between my-2 odd:bg-blue-50 even:bg-yellow-500">
+                        <div key={i} className="flex justify-between py-2 odd:bg-blue-50 even:bg-red-50 empty:hidden">
                             <span className="text-gray-500">Gray Chair</span>
                             <span className="font-semibold">$19</span>
                         </div>
                     ))}
                 </ul>
-
-                {["a", "b", "c", ""].map((c, i) => (
-                    <li key={i} className="bg-red-500 py-2 empty:hidden">
-                        {c}
-                    </li>
-                ))}
 
                 <div className="flex justify-between mt-2 pt-2 border-t-2 border-dashed">
                     <span>Total</span>
@@ -37,7 +31,7 @@ export default function Home() {
                 </button>
             </div>
 
-            <div className="bg-white overflow-hidden rounded-2xl shadow-xl">
+            <div className="bg-white overflow-hidden rounded-2xl shadow-xl group">
                 <div className="p-6 pb-14 bg-blue-500">
                     <span className="text-white text-2xl">Profile</span>
                 </div>
@@ -45,11 +39,11 @@ export default function Home() {
                 <div className="rounded-3xl p-6 relative -top-5 bg-white">
                     <div className="flex relative -top-16 items-end justify-between">
                         <div className="flex flex-col items-center">
-                            <span className="text-sm text-gray-500">Orders</span>
+                            <span className="text-sm text-gray-500 group">Orders</span>
                             <span className="font-medium">340</span>
                         </div>
 
-                        <div className="h-24 w-24 bg-red-400 rounded-full" />
+                        <div className="h-24 w-24 bg-red-400 rounded-full group-hover:bg-red-300 transition" />
 
                         <div className="flex flex-col items-center">
                             <span className="text-sm text-gray-500">Spent</span>
@@ -101,6 +95,23 @@ export default function Home() {
             </div>
 
             <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
+
+            <div className="p-10 rounded-2xl shadow-xl bg-blue-100 focus-within:bg-blue-200">
+                <form action="" className="flex flex-col space-y-2 ">
+                    <input type="text" required placeholder="Username" className="p-2 shadow-md required:border-2 border-yellow-500 invalid:border-red-500 valid:border-teal-500 placeholder-shown:bg-slate-300 placeholder:text-red-500 disabled:opacity-0" />
+                    <input type="password" required placeholder="Password" className="p-2 shadow-md" />
+                    <input type="submit" value="Login" className="p-2 bg-yellow-100 shadow-md cursor-pointer transition hover:bg-red-100 hover:font-semibold" />
+                </form>
+            </div>
+
+            <div className="p-10 rounded-2xl shadow-xl bg-white">
+                <form action="" className="flex flex-col space-y-2 ">
+                    <input type="text" required placeholder="Username" className="peer p-2 h-12 shadow-md border border-gray-400 rounded-md invalid:border-red-500" />
+                    <span className="hidden text-red-500 peer-invalid:block">This input is invalid</span>
+                    <span className="hidden text-teal-500 peer-valid:block">This input is valid</span>
+                    <input type="submit" value="Login" className="p-2 h-12 bg-slate-700 rounded-md shadow-md cursor-pointer" />
+                </form>
+            </div>
         </div>
     );
 }

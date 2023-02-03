@@ -5,8 +5,8 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
     return (
         // <div className="bg-slate-400 py-10 px-5 flex flex-col space-y-5">
-        <div className="bg-slate-400 py-20 px-5 grid gap-10 min-h-screen">
-            <div className="bg-white p-6 rounded-3xl shadow-xl">
+        <div className="bg-slate-400 xl:place-content-center py-20 px-5 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
+            <div className="flex flex-col justify-between bg-white sm:bg-red-300 md:bg-teal-300 lg:bg-indigo-300 xl:bg-amber-300 2xl:bg-emerald-400 p-6 rounded-3xl shadow-xl">
                 <span className="font-semibold text-3xl">Select Item</span>
 
                 <ul>
@@ -31,8 +31,8 @@ export default function Home() {
                 </button>
             </div>
 
-            <div className="bg-white overflow-hidden rounded-2xl shadow-xl group">
-                <div className="p-6 pb-14 bg-blue-500">
+            <div className="flex flex-col bg-white overflow-hidden rounded-2xl shadow-xl group">
+                <div className="p-6 pb-14 bg-blue-500 landscape:bg-teal-500 portrait:bg-red-400 lg:pb-32 xl:pb-52">
                     <span className="text-white text-2xl">Profile</span>
                 </div>
 
@@ -94,8 +94,6 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="bg-white p-10 rounded-2xl shadow-xl"></div>
-
             <div className="p-10 rounded-2xl shadow-xl bg-blue-100 focus-within:bg-blue-200">
                 <form action="" className="flex flex-col space-y-2 ">
                     <input type="text" required placeholder="Username" className="p-2 shadow-md required:border-2 border-yellow-500 invalid:border-red-500 valid:border-teal-500 placeholder-shown:bg-slate-300 placeholder:text-red-500 disabled:opacity-0" />
@@ -112,6 +110,28 @@ export default function Home() {
                     <input type="submit" value="Login" className="p-2 h-12 bg-slate-700 rounded-md shadow-md cursor-pointer" />
                 </form>
             </div>
+
+            <div className="bg-white p-10 rounded-2xl shadow-xl">
+                <details className="open:text-white open:bg-indigo-400">
+                    <summary className="select-none cursor-pointer">What is my fav. food.</summary>
+                    <span className="selection:bg-pink-100">asdasdasd</span>
+                </details>
+            </div>
+
+            <div className="bg-white p-10 rounded-2xl shadow-xl">
+                <ul className="list-disc marker:text-teal-500">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <input type="file" className="transition file:border-0 file:rounded-xl file:px-3 file:text-white file:bg-purple-700 cursor-pointer file:cursor-pointer hover:file:bg-red-400" />
+            </div>
+
+            <div className="bg-white p-10 rounded-2xl shadow-xl">
+                <p className="first-letter:text-red-600 first-letter:text-6xl first-line:hover:text-red-700">Lorem ipsum sadasd fas ahd jsahdk as</p>
+            </div>
+
+            <div className="bg-white p-10 rounded-2xl shadow-xl xl:col-span-3"></div>
         </div>
     );
 }

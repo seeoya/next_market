@@ -5,15 +5,15 @@ import styles from "../styles/Home.module.css";
 export default function Home() {
     return (
         // <div className="bg-slate-400 py-10 px-5 flex flex-col space-y-5">
-        <div className="bg-slate-400 xl:place-content-center py-20 px-5 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
-            <div className="flex flex-col justify-between bg-white sm:bg-red-300 md:bg-teal-300 lg:bg-indigo-300 xl:bg-amber-300 2xl:bg-emerald-400 p-6 rounded-3xl shadow-xl">
-                <span className="font-semibold text-3xl">Select Item</span>
+        <div className="dark bg-slate-400 xl:place-content-center py-20 px-5 grid gap-10 lg:grid-cols-2 xl:grid-cols-3 min-h-screen">
+            <div className=" flex flex-col justify-between bg-white dark:bg-black sm:bg-red-300 md:bg-teal-300 lg:bg-indigo-300 xl:bg-amber-300 2xl:bg-emerald-400 p-6 rounded-3xl shadow-xl">
+                <span className="font-semibold text-3xl dark:text-white">Select Item</span>
 
                 <ul>
                     {[1, 2, 3, 4, 5].map((i) => (
-                        <div key={i} className="flex justify-between py-2 odd:bg-blue-50 even:bg-red-50 empty:hidden">
-                            <span className="text-gray-500">Gray Chair</span>
-                            <span className="font-semibold">$19</span>
+                        <div key={i} className="flex justify-between py-2 odd:bg-blue-50 even:bg-red-50 empty:hidden dark:bg-black">
+                            <span className="text-gray-500 dark:text-gray-100">Gray Chair</span>
+                            <span className="font-semibold dark:text-white">$19</span>
                         </div>
                     ))}
                 </ul>
@@ -25,14 +25,15 @@ export default function Home() {
 
                 <button
                     className="block p-3 mx-auto mt-5 bg-blue-500 text-white text-center rounded-xl w-3/4
-                hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500 transition"
+                    hover:bg-teal-500 hover:text-black active:bg-yellow-500 focus:bg-red-500 transition
+                    dark:bg-gray-700 dark:hover:bg-white"
                 >
                     Checkout
                 </button>
             </div>
 
             <div className="flex flex-col bg-white overflow-hidden rounded-2xl shadow-xl group">
-                <div className="p-6 pb-14 bg-blue-500 landscape:bg-teal-500 portrait:bg-red-400 lg:pb-32 xl:pb-52">
+                <div className="p-6 pb-14 bg-blue-500 landscape:bg-teal-500 portrait:bg-red-800 lg:pb-32 xl:pb-52">
                     <span className="text-white text-2xl">Profile</span>
                 </div>
 

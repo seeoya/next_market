@@ -33,6 +33,7 @@ const Community: NextPage = () => {
                 </svg>
             </button>
         </div>
+
     );
 };
 

@@ -1,15 +1,25 @@
 import type { NextPage } from "next";
+import Link from "next/link";
 
 const Community: NextPage = () => {
     return (
         <div>
+            <div className="bg-red-100 space-x-4">
+                <Link href="tailwindtest" className="">UI기능테스트</Link>
+                <Link href="community" className="">커뮤니티</Link>
+                <Link href="community/item" className="">커뮤니티/아이템</Link>
+                <Link href="items/123" className="">아이템/상세</Link>
+                <Link href="items/upload" className="">아이템/업로드</Link>
+
+            </div>
+
             <div>
                 <span>동네질문</span>
                 <span>
                     <span>Q.</span> What is the best mandu restaurant?
                 </span>
                 <div>
-                    <span>니꼬</span>
+                    <span>A</span>
                     <span>18시간 전</span>
                 </div>
                 <div>
